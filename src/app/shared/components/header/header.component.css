@@ -1,0 +1,52 @@
+.navbar-brand {
+    font-weight: 700;
+    font-size: 24px;
+    color: #081B0E;
+}
+
+.nav-item {
+    padding-top: 4px;
+    a {
+        font-size: 14px;
+    }
+}
+
+.btn {
+    border-radius: 4px;
+    height: 2.6rem;
+}
+
+.register-btn {
+    background-color: #066523;
+    color: #FFF;
+    width: 9rem;
+}
+
+.login-btn {
+    border: 1px solid #066523;
+    color: #066523;
+    width: 6rem;
+}
+
+.logout-btn {
+    color: #D62020;
+    width: auto !important;
+    font-weight: 500;
+}
+
+.modal-btn-action {
+    padding: 0.875rem 1.25rem 0.875rem 1.25rem;
+    height: 3.375rem;
+}
+
+.modal {
+    h6 {
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 14px;
+    }
+    .modal-btn-action-logout {
+        background-color: #D62020;
+    }
+}

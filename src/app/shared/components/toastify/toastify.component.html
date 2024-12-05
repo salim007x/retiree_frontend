@@ -1,0 +1,11 @@
+<div class="backdrop" *ngIf="showToast">
+  <div
+    class="success-content"
+    [ngClass]="{ 'fade-in': showToast, 'fade-out': !showToast }"
+  >
+    <p>{{ data }}</p>
+    <button (click)="closeToast()" class="ok-button border-0 bg-transparent" aria-label="Close Toast">
+      ✕
+    </button>
+  </div>
+</div>

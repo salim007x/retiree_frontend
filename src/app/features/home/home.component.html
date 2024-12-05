@@ -1,0 +1,96 @@
+<app-header></app-header>
+<main>
+    <!-- HEROES SECTION -->
+    <section class="heroes-section d-flex align-items-center">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+
+                <div class="heroes col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <h1>One Platform, <br> Two Solutions</h1>
+                    <h5 class="mt-3">Simplifying Benefits for Retirees and <br> Employers</h5>
+                    <p class="my-4">Whether you're a retiree claiming your benefits or an employer submitting employee data for verification, we've got you covered with a secure and seamless experience.</p>
+
+                    <div class="d-flex mt-3">
+                        <button class="btn d-flex align-items-center justify-content-center claim-benefits-btn" type="button">Claim Your Benefits</button>
+                        <button class="btn d-flex align-items-center justify-content-center upload-employee-data-btn ms-3" type="button">Upload Employee Data</button>
+                    </div>
+
+                </div>
+
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="img-holder d-flex justify-content-end">
+                        <img src="assets/images/group-17.png" alt="happy people">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+     <section class="features">
+            <div class="container">
+
+                <div class="w-100 text-center" data-aos="fade-up" data-aos-duration="2000">
+                    <h2>
+                        Retiree data processing <br> <span>made easy!</span>
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4" *ngFor="let feature of features">
+                        <div class="feature-card p-4" data-aos="fade-up"
+     data-aos-duration="3000">
+                            <div class="icon-holder">
+                                <img [src]="feature?.icon" [alt]="feature?.alt">
+                            </div>
+    
+                            <h6>{{ feature?.title }}</h6>
+    
+                            <p>{{ feature?.text }}</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+     </section>
+
+     <!-- HOW IT WORKS SECTION -->
+     <section class="how-it-works">
+        <div class="container">
+
+            <div class="w-100 text-center header-container" data-aos="fade-up" data-aos-duration="2000">
+                <h2>How it <span>works</span></h2>
+                <p>Follow these easy steps to get started</p>
+            </div>
+
+            <div class="w-50 d-flex align-items-center justify-content-center flex-column mx-auto mt-5">
+
+                <!-- tabs -->
+                <div class="tabs py-2 px-3 d-flex align-items-center justify-content-between">
+                    <button class="border-0" [ngClass]="{ 'active': tab === 'retiree', 'not-active': tab != 'retiree' }" (click)="setTab('retiree')">Retiree</button>
+                    <button class="border-0" [ngClass]="{ 'active': tab === 'PFA', 'not-active': tab != 'PFA' }" (click)="setTab('PFA')">PFA</button>
+                    <button class="border-0" [ngClass]="{ 'active': tab === 'MDA', 'not-active': tab != 'MDA' }" (click)="setTab('MDA')">MDA</button>
+                </div>
+
+                <div class="listing">
+                    <div *ngFor="let list of filteredHowItWorks" class="list d-flex align-items-start mb-5">
+                        <div class="number-container d-flex align-items-center justify-content-center">{{ list?.id }}</div>
+                    <div class="ms-4">
+                        <h6 class="mb-3">{{ list?.title }}</h6>
+                        <p>{{ list?.text }}</p>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+             
+
+
+        </div>
+
+        <img src="assets/images/file-11.png" alt="person 1" class="person1">
+        <img src="assets/images/file-9.png" alt="person 2" class="person2">
+     </section>
+
+</main>
+<app-footer></app-footer>

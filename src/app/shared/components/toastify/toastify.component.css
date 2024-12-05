@@ -1,0 +1,61 @@
+/* Backdrop to slightly dim the background */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Subtle dark overlay */
+    z-index: 99999; /* Below toast but above the main content */
+  }
+  
+  /* Toast container */
+  .success-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 24rem;
+    background-color: #121313ac;
+    padding: 1rem;
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100000; /* Ensuring it's above the backdrop */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Modern shadow effect */
+    border: 1px solid #dde0e2;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  /* Smooth fade-in and slide effect */
+  .success-content.fade-in {
+    transform: translate(-50%, -40%);
+    opacity: 1;
+  }
+  
+  .success-content.fade-out {
+    transform: translate(-50%, -60%);
+    opacity: 0;
+  }
+  
+  /* Toast text */
+  p {
+    font-size: 14px;
+    color: #FFFFFF; /* Modern grey for better readability */
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+  }
+  
+  /* Close button */
+  .ok-button {
+    font-size: 14px;
+    color: #FFFFFF; /* Subtle grey for button */
+    cursor: pointer;
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease;
+  }
+  

@@ -1,0 +1,206 @@
+/* HEROES SECTION */
+.heroes-section {
+    height: 92vh;
+
+    .heroes {
+
+        h1 {
+            font-size: 60px;
+            color: #081B0E;
+            font-weight: 800;
+        }
+
+        h5 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #646464;
+            line-height: 2.6rem;
+        }
+
+        p {
+            color: #646464;
+            font-size: 14px;
+            width: 75%;
+            line-height: 1.5rem;
+
+        }
+
+
+        .claim-benefits-btn,
+        .upload-employee-data-btn {
+            border-radius: 4px;
+            height: 3rem;
+        }
+
+        .claim-benefits-btn {
+            background-color: #066523;
+            color: #FFF;
+            padding: 1rem 3rem;
+        }
+
+        .upload-employee-data-btn {
+            border: 1px solid #066523;
+            color: #066523;
+            padding: 1rem 3rem;
+        }
+
+    }
+
+    .img-holder {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            height: 36rem;
+            object-fit: contain;
+        }
+    }
+}
+
+
+/* FEATURES SECTION */
+.features {
+    background-color: #F3F3F3;
+    padding: 6rem 0;
+
+    h2 {
+        color: #081B0E;
+        font-size: 48px;
+        font-weight: 600;
+        transform: scale(0.9);
+
+        span {
+            color: #05511C !important;
+        }
+    }
+
+    .row {
+        margin-top: 5rem;
+    }
+
+    .feature-card {
+        border-radius: 12px;
+        height: 20rem;
+        background-color: #FFFFFF;
+        transform: scale(0.9);
+
+        h6 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 1.2rem;
+            margin-bottom: 1rem;
+
+        }
+
+        p {
+            color: #646464;
+            font-size: 17px;
+            line-height: 1.8rem;
+
+        }
+    }
+}
+
+
+/* HOW IT WORKS SECTION */
+.how-it-works {
+    background-color: #FFFFFF;
+    padding: 6rem 0;
+    position: relative;
+
+    .person1, .person2 {
+        position: absolute;
+        width: auto;
+        height: 30%;
+      }
+  
+      .person1 {
+        bottom: 0;
+        left: 0;
+      }
+  
+      .person2 {
+        bottom: 0;
+        right: 0;
+      }
+
+    .header-container {
+        h2 {
+            color: #081B0E;
+            font-size: 48px;
+            font-weight: 600;
+
+            span {
+                color: #05511C !important;
+            }
+        }
+
+        p {
+            color: #646464;
+            font-size: 14px;
+            line-height: 1.8rem;
+
+        }
+    }
+
+    .tabs {
+        transform: scale(0.9);
+        background-color: #F3F3F3;
+        width: 100%;
+        height: 4rem;
+        border-radius: 14px;
+
+        button {
+            font-size: 16px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .active {
+            font-weight: 500;
+            background-color: #FFFFFF;
+            color: #066523;
+            border-radius: 12px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .not-active {
+            background-color: transparent;
+            color: #646464;
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+
+   .listing {
+    margin-top: 4rem;
+    width: 80%;
+
+    .list {
+        transform: scale(0.9);
+        .number-container {
+            border-radius: 50%;
+            padding: 1.2rem 1.8rem;
+            background-color: #F3F3F3;
+            font-weight: 600;
+            font-size: 24px;
+        }
+    
+        h6 {
+            font-size: 20px;
+            font-weight: 500;
+        }
+    
+        p {
+            color: #646464;
+            font-size: 17px;
+            line-height: 1.8rem;
+        }
+    
+       }
+    }
+}

@@ -1,0 +1,32 @@
+section {
+    background-color: #066523;
+    color: #FFF;
+    padding: 4rem 0;
+
+    a {
+        text-decoration: none;
+        color: #FFF !important;
+        display: block;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    small {
+        font-size: 12px;
+    }
+
+    .address {
+        width: 35%;
+    }
+
+    button {
+        img {
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+}

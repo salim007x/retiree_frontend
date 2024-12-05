@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Open Sans';
+}
+
+/* Remove spinner arrows for Chrome, Edge, and Safari */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove spinner arrows for Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}

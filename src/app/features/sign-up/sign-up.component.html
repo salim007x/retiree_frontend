@@ -1,0 +1,75 @@
+<section>
+    <div class="row h-100">
+     
+          <!-- Left Section -->
+          <div class="position-relative col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <app-auth-layout></app-auth-layout>
+            </div>
+  
+      <!-- Right Section -->
+      <div class="position-relative right-col col-xxl-5 col-xl-5 col-lg-5 col-md-6 col-sm-12 col-xs-12 offset-xxl-2 offset-xl-2 offset-lg-2 d-flex flex-column justify-content-center">
+        <a routerLink="/home" class="text-decoration-none mb-4 text-dark">
+          &larr; <span class="ms-1 back-to-home">Back to home</span>
+        </a>
+        <h1 class="mb-3">Register</h1>
+        <p class="text-muted mb-4 page-caption">Enter your details to start your pension process</p>
+  
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="input-container">
+            <label for="rsaPin" class="form-label">RSA Pin *</label>
+            <input type="number" class="form-control" id="rsaPin" formControlName="rsaPin" placeholder="xxxxxx">
+            <small *ngIf="registerForm.get('rsaPin')?.hasError('invalidRsaPin') && registerForm.get('rsaPin')?.touched" class="text-danger">
+              RSA Pin must be exactly 12 digits.
+            </small>
+          </div>
+
+          
+          <div class="input-container">
+            <label for="surname" class="form-label">Surname *</label>
+            <input type="text" class="form-control" id="surname" formControlName="surname" placeholder="Surname">
+          </div>
+          <div class="input-container">
+            <label for="email" class="form-label">Email Address *</label>
+            <input type="email" class="form-control" id="email" formControlName="email" placeholder="Your email address">
+          </div>
+          <div class="row">
+            <div class="colx-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 input-container">
+              <label for="password" class="form-label">Password *</label>
+              <div class="d-flex align-items-center">
+                <input type="{{ showPassword ? 'text' : 'password' }}" class="form-control" id="password" formControlName="password" placeholder="Password">
+              <button type="button" class="border-0 bg-transparent icon-btn" (click)="togglePasswordVisibility()">
+                <img src="{{ showPassword ? 'assets/icons/hide.png' : 'assets/icons/view.png'}}" alt="view">
+              </button>
+              </div>
+              <small>Passwords must not be less than 8 characters</small>
+            </div>
+            <div class="colx-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 input-container">
+              <label for="confirmPassword" class="form-label">Confirm Password *</label>
+              <div class="d-flex align-items-center">
+                <input type="{{ showConfirmPassword ? 'text' : 'password' }}" class="form-control" id="confirmPassword" formControlName="confirmPassword" placeholder="Confirm Password">
+              <button type="button" class="border-0 bg-transparent icon-btn" (click)="toggleConfirmPasswordVisibility()">
+                <img src="{{ showConfirmPassword ? 'assets/icons/hide.png' : 'assets/icons/view.png'}}" alt="view">
+              </button>
+              </div>
+              <small>Passwords must be the same</small>
+            </div>
+            
+          </div>
+          <button type="submit" class="btn btn-success w-100" [disabled]="registerForm.invalid">Register</button>
+        </form>
+  
+        <div class="mt-4 login-container">
+          <p class="text-muted mb-0">
+            Already have an account or are not a retiree?
+            <a routerLink="/login" class="text-decoration-none text-success">Login here</a>
+          </p>
+        </div>
+  
+        <footer class="w-75 position-absolute bottom-0">
+          <p class="text-center">Powered by StellarSync Technology &copy; {{ currentYear }} v.1.0.0</p>
+        </footer>
+      </div>
+    </div>
+    
+  </section>
+  
